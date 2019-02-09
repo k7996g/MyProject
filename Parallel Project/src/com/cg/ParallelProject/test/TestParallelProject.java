@@ -30,7 +30,7 @@ class TestParallelProject {
 			assertEquals(account, a.deposit(1000, 1000));
 		} catch (AccountDoesNotExistException e) {
 			// TODO Auto-generated catch block
-			
+			System.out.println("Account does not exist");
 		}
 	}
 
@@ -44,7 +44,7 @@ class TestParallelProject {
 			assertEquals(account, a.deposit(1001, 1000));
 		} catch (AccountDoesNotExistException e) {
 			// TODO Auto-generated catch block
-			
+			System.out.println("Account does not exist");
 		}
 	}
 
@@ -71,7 +71,7 @@ class TestParallelProject {
 			assertEquals(account, a.deposit(1003, 39500));
 		} catch (AccountDoesNotExistException e) {
 			// TODO Auto-generated catch block
-		
+			System.out.println("Account does not exist");
 		}
 	}
 
@@ -80,23 +80,22 @@ class TestParallelProject {
 		Account account = new Account(1005, 5000);
 		AccountDao a = new AccountDaoImpl();
 		a.Create(1005, 10000);
-		a.withDraw(1005,5000);
+		assertEquals(account,a.withDraw(1005,5000));
 	}
 
 	@Test
 	void test2WithDraw() throws InsufficientBalanceAfterWithdrawException {
 		AccountDao a = new AccountDaoImpl();
-		a.Create(1000, 5000);
-		Account account = new Account(1000, 400);
+		a.Create(1006, 5000);
+		Account account = new Account(1006, 1000);
 	
-		a.withDraw(1000, 4600);
-	}
+		assertEquals(account,a.withDraw(1006,4000));}
 
 	@Test
-	void testShowBalance() {
+	void testShowBalance() throws InsufficientBalanceAfterWithdrawException {
 		AccountDao a = new AccountDaoImpl();
-		a.Create(1000, 5000);
-		Account account = new Account(1000, 5000);
-		a.showBalance(1000);
+		a.Create(1007, 5000);
+		Account account = new Account(1007, 5000);
+		assertEquals(account,a.showBalance(1007));
 	}
 }
