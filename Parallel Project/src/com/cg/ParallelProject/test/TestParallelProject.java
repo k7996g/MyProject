@@ -30,7 +30,7 @@ class TestParallelProject {
 			assertEquals(account, a.deposit(1000, 1000));
 		} catch (AccountDoesNotExistException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
 		}
 	}
 
@@ -44,7 +44,7 @@ class TestParallelProject {
 			assertEquals(account, a.deposit(1001, 1000));
 		} catch (AccountDoesNotExistException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
 		}
 	}
 
@@ -58,7 +58,7 @@ class TestParallelProject {
 			assertEquals(account, a.deposit(1002, 5200));
 		} catch (AccountDoesNotExistException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Account does not exist");
 		}
 	}
 
@@ -71,35 +71,25 @@ class TestParallelProject {
 			assertEquals(account, a.deposit(1003, 39500));
 		} catch (AccountDoesNotExistException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
 		}
 	}
 
 	@Test
-	void test1WithDraw() {
+	void test1WithDraw() throws InsufficientBalanceAfterWithdrawException {
 		Account account = new Account(1005, 5000);
 		AccountDao a = new AccountDaoImpl();
 		a.Create(1005, 10000);
-		try {
-			assertEquals(account, a.withDraw(1005, 5000));
-		} catch (InsufficientBalanceAfterWithdrawException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		a.withDraw(1005,5000);
 	}
 
 	@Test
-	void test2WithDraw() {
+	void test2WithDraw() throws InsufficientBalanceAfterWithdrawException {
 		AccountDao a = new AccountDaoImpl();
 		a.Create(1000, 5000);
 		Account account = new Account(1000, 400);
 	
-		try {
-			assertEquals(account, a.withDraw(1000, 4600));
-		} catch (InsufficientBalanceAfterWithdrawException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		a.withDraw(1000, 4600);
 	}
 
 	@Test
@@ -107,6 +97,6 @@ class TestParallelProject {
 		AccountDao a = new AccountDaoImpl();
 		a.Create(1000, 5000);
 		Account account = new Account(1000, 5000);
-		assertEquals(account, a.showBalance(1000));
+		a.showBalance(1000);
 	}
 }
