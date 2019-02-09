@@ -19,8 +19,8 @@ static HashMap<Integer, Account> hm = new HashMap<>();
 		int i=0,f=0;
 		for(Map.Entry m:hm.entrySet())
 		{if(((Account) m.getValue()).getAccNo()==accNo)
-			System.out.println("Account no already exists");
-		f=1;
+		{System.out.println("Account no already exists");
+		f=1;break;}
 		}
 		if(f==0)
 		{Account account =new Account(accNo, amount);
