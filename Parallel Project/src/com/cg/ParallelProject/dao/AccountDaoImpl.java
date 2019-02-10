@@ -10,7 +10,7 @@ import com.cg.ParallelProject.exception.InsufficientBalanceAfterWithdrawExceptio
 public class AccountDaoImpl implements AccountDao {
 	static HashMap<Integer, Account> hm = new HashMap<>();
 	int i = 0;
-	int countDeposit = 0, countWithdraw = 0, countFundTransfer = 0, x = 0, y = 0, z = 0, a = 0, b = 0;
+	int countDeposit = 0, countWithdraw = 0, countFundTransfer = 0, x = 0, y = 0, z = 0, a = 0, b = 0,c=0,d=0;
 
 	public AccountDaoImpl() {
 		super();
@@ -42,11 +42,11 @@ public class AccountDaoImpl implements AccountDao {
 		for (Map.Entry<Integer, Account> m : hm.entrySet()) {
 			if (((Account) m.getValue()).getAccNo() == accNo) {
 				((Account) m.getValue()).setAmount(((Account) m.getValue()).getAmount() + amount);
-				if (a == b) {
+				if (c == d) {
 					countDeposit++;
 					printTransaction(amount);
 				} else {
-					b = a;
+					d = c;
 				}
 				return (Account) m.getValue();
 			}
