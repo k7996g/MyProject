@@ -82,7 +82,7 @@ public class AccountDaoImpl implements AccountDao {
 	public void FundTransfer(int accNo1, int accNo2, int amount)
 			throws InsufficientBalanceAfterWithdrawException, AccountDoesNotExistException {
 		a++;
-
+                c++;
 		deposit(accNo2, amount);
 		withDraw(accNo1, amount);
 		System.out.println("Your balance is " + showBalance(accNo1));
