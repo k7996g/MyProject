@@ -31,3 +31,14 @@ https://stackoverflow.com/questions/38275467/send-table-as-an-email-body-not-att
 from openpyxl import load_workbook
 wb = load_workbook('sample_book.xlsx')
 print(wb.sheetnames)
+
+
+
+import os
+
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
+
+This takes the filename of your script, converts it to an absolute path, then extracts the directory of that path, then changes into that directory.
+
