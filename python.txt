@@ -1,0 +1,28 @@
+https://pypi.org/project/tabulate/
+
+https://stackoverflow.com/questions/18528533/pretty-printing-a-pandas-dataframe
+
+https://towardsdatascience.com/pretty-displaying-tricks-for-columnar-data-in-python-2fe3b3ed9b83
+
+import pandas as pd
+import numpy as np
+from tabulate import tabulate
+
+df = pd.DataFrame(np.random.random((4,3)), columns=['A','B','C'])
+print("foo")
+return(tabulate(df, headers="keys", tablefmt="orgtbl"))
+
+
+import pandas as pd
+import numpy as np
+from tabulate import tabulate
+
+df = pd.DataFrame(np.random.random((4,3)), columns=['A','B','C'])
+print("foo")
+tabulate(df, headers="keys" ,headers="keys",tablefmt="orgtbl")
+
+
+
+https://datatofish.com/batch-python-script/
+
+https://stackoverflow.com/questions/38275467/send-table-as-an-email-body-not-attachment-in-python
