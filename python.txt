@@ -26,3 +26,8 @@ tabulate(df, headers="keys" ,headers="keys",tablefmt="orgtbl")
 https://datatofish.com/batch-python-script/
 
 https://stackoverflow.com/questions/38275467/send-table-as-an-email-body-not-attachment-in-python
+
+
+from openpyxl import load_workbook
+wb = load_workbook('sample_book.xlsx')
+print(wb.sheetnames)
