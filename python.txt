@@ -1,49 +1,61 @@
-https://pypi.org/project/tabulate/
-
-https://stackoverflow.com/questions/18528533/pretty-printing-a-pandas-dataframe
-
-https://towardsdatascience.com/pretty-displaying-tricks-for-columnar-data-in-python-2fe3b3ed9b83
-
-import pandas as pd
-import numpy as np
-from tabulate import tabulate
-
-df = pd.DataFrame(np.random.random((4,3)), columns=['A','B','C'])
-print("foo")
-return(tabulate(df, headers="keys", tablefmt="orgtbl"))
-
-
-import pandas as pd
-import numpy as np
-from tabulate import tabulate
-
-df = pd.DataFrame(np.random.random((4,3)), columns=['A','B','C'])
-print("foo")
-tabulate(df, headers="keys" ,headers="keys",tablefmt="orgtbl")
-
-
-
-https://datatofish.com/batch-python-script/
-
-https://stackoverflow.com/questions/38275467/send-table-as-an-email-body-not-attachment-in-python
-
-
-from openpyxl import load_workbook
-wb = load_workbook('sample_book.xlsx')
-print(wb.sheetnames)
-
-
-
+import win32com.client
 import os
+outlook=win32com.client.Dispatch("Outlook.Application").GetNameSpace("MAPI")
+inbox=outlook.GetDefaultFolder(6) #Inbox default index value is 6
+message=inbox.Items
+message2=message.GetLast()
+subject=message2.Subject
+body=message2.body
+date=message2.senton.date()   
+sender=message2.Sender
+attachments=message2.Attachments
+print(subject)
+print(body)
+print(sender)
+print(attachments.count)
+print(date) 
 
-abspath = os.path.abspath(__file__)
-dname = os.path.dirname(abspath)
-os.chdir(dname)
-
-This takes the filename of your script, converts it to an absolute path, then extracts the directory of that path, then changes into that directory.
 
 
 
 
-https://windowsreport.com/download-overwrite-existing-files/
 
+
+
+
+import win32com.client, sqlite3
+from datetime import datetime
+def collectMail():
+    conn = sqlite3.connect('outlook.db')
+    i = 0
+    try:
+        outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
+        inbox = outlook.GetDefaultFolder(6)
+        messages = inbox.Items
+        print 'total messages: ', len(messages)
+        message = messages.GetFirst ()
+        while message:
+            i += 1
+            try:
+                subject = message.Subject
+                #print i, subject
+                received_time = str(message.ReceivedTime)
+                #print received_time
+                received_time = datetime.strptime(received_time, '%m/%d/%y %H:%M:%S')
+                #print message.EntryID
+                html_body = message.HTMLBody
+                size = long(message.Size)
+                sender =  message.SenderName
+                receiver = message.To
+                cc = message.Cc
+                body = message.Body
+                conn.execute('insert into outlook(SUBJECT, SENDER, RECEIVER, CC, SIZE, RECEIVED_TIME, BODY, HTML_BODY) values(?, ?, ?, ?, ?, ?, ?, ?)', (subject, sender, receiver, cc, size, received_time, body, html_body))
+                conn.commit()
+            except:
+                print i, 'skip'
+                continue
+            message = messages.GetNext()
+    finally:
+        print 'connection closed'
+        conn.close()
+collectMail()
