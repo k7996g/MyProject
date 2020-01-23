@@ -142,3 +142,10 @@ while message:
 with open('messages_list.csv','w', newline='', encoding='utf-8') as f:
     wrt = csv.writer(f, dialect='excel')
     wrt.writerows(msglst)
+    
+    
+    
+    
+    
+    https://sqa.stackexchange.com/questions/18342/how-to-handle-dynamic-changing-ids-in-xpath
+    https://browsee.io/blog/strategies-to-handle-dynamic-web-elements-in-selenium/
