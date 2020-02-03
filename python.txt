@@ -153,7 +153,8 @@ with open('messages_list.csv','w', newline='', encoding='utf-8') as f:
     https://stackoverflow.com/questions/41543416/run-python-script-at-reception-of-email
     https://stackoverflow.com/questions/22600446/trigger-script-upon-email-receipt
     
-    
+    https://stackoverflow.com/questions/13377793/is-it-possible-to-get-an-excel-documents-row-count-without-loading-the-entire-d
+    https://www.geeksforgeeks.org/reading-excel-file-using-python/
     
     
     
