@@ -155,6 +155,8 @@ with open('messages_list.csv','w', newline='', encoding='utf-8') as f:
     
     https://stackoverflow.com/questions/13377793/is-it-possible-to-get-an-excel-documents-row-count-without-loading-the-entire-d
     https://www.geeksforgeeks.org/reading-excel-file-using-python/
+    https://kanoki.org/2019/04/12/pandas-how-to-get-a-cell-value-and-update-it/
+    https://www.geeksforgeeks.org/python-pandas-dataframe-get_value/
     
     
     
