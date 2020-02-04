@@ -161,6 +161,7 @@ with open('messages_list.csv','w', newline='', encoding='utf-8') as f:
     https://www.quora.com/What-is-the-way-to-find-a-particular-keyword-from-Excel-using-Python
     https://stackoverflow.com/questions/32090002/searching-the-string-and-getting-the-row-and-column-value
     https://python-forum.io/Thread-find-cell-value-with-matching-regular-expression-of-a-row-in-excel-file
+    https://docs.aspose.com/display/cellsjava/Inserting+and+Deleting+Rows+and+Columns+in+Python
     
     
     
