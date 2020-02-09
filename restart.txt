@@ -1,0 +1,13 @@
+https://blog.petrzemek.net/2014/03/23/restarting-a-python-script-within-itself/
+https://github.com/s3rvac/blog/blob/master/en-2014-03-23-restarting-a-python-script-within-itself/daemon.py
+https://unix.stackexchange.com/questions/107939/how-to-restart-the-python-script-automatically-if-it-is-killed-or-dies
+https://www.quora.com/How-do-I-automatically-restart-my-python-code-after-it-exits-on-an-error
+https://www.alexkras.com/how-to-restart-python-script-after-exception-and-run-it-forever/
+https://www.raspberrypi.org/forums/viewtopic.php?t=190468
+https://stackoverflow.com/questions/48648597/how-to-use-batch-file-to-run-multiple-python-scripts-simultaneously
+https://stackoverflow.com/questions/28549641/run-multiple-python-scripts-concurrently
+docs.python.org/2/library/multiprocessing.html
+https://www.quora.com/How-can-I-call-multiple-Python-scripts-from-a-single-shell-script
+https://www.quora.com/Can-I-run-selenium-in-background
+stackoverflow.com/questions/26018790/how-to-run-selenium-webdriver-in-the-background
+https://stackoverflow.com/questions/16408524/invoke-a-python-script-when-an-outlook-email-is-received
