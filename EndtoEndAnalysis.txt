@@ -11,8 +11,8 @@ Solution Approach:
 1. A tool that does all the analysis following End-to-End Standards.
 2. Tool use various rest API web services to fetch information from other required tools like Splunk, Kibana, Outlook, etc.
 3. The tool will check for the Quote status for particular application and state,
-3. An e-mail notification will be triggered to acknowledge the End-to-End analysis with all the details.
-4. If no outage then, an e-mail notification will be triggered stating that "Application is working fine". 
+4. An e-mail notification will be triggered to acknowledge the End-to-End analysis with all the details.
+5. If no outage then, an e-mail notification will be triggered stating that "Application is working fine". 
 
 Outcome:
 
