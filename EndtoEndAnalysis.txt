@@ -1,0 +1,31 @@
+Business Goals:
+
+1. To examine if an application outage is there or not.
+2. Average Manual Efforts= 2000 hrs per month
+3. Should trigger an e-mail to the team about the outage analysis.
+4. Average Outage Count= 40 to 45 per month.
+5. Should run 24*7 in background.
+
+Solution Approach:
+
+1. A tool that does all the analysis following End-to-End Standards.
+2. Tool use various rest API web services to fetch information from other required tools like Splunk, Kibana, Outlook, etc.
+3. The tool will check for the Quote status for particular application and state,
+3. An e-mail notification will be triggered to acknowledge the End-to-End analysis with all the details.
+4. If no outage then, an e-mail notification will be triggered stating that "Application is working fine". 
+
+Outcome:
+
+1. A quick analysis of the application outage.
+2. Reduced chances of human error.
+3. Reduced manual efforts.
+4. Increase in productivity.
+5. Increased the efficiency of figuring out application outages.
+
+
+**************************************************** Efforts Saved: 1000 hrs per month **************************************************
+
+
+
+
+
