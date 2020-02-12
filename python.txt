@@ -166,4 +166,27 @@ with open('messages_list.csv','w', newline='', encoding='utf-8') as f:
     
     
     
+    Business Goals:
+
+1. It was arduous to forage the requisite KI record comfortably.
+2. Average time for search= 5 to 10 minutes.
+3. The application team bestows us with an electronic copy of the KI. So, each resource had to have or retain possession of the updated KI in lone's systems.
+4. There was the risk that some of the resources had amend their KI record erroneously and could result in solving incidents erroneously.
+5. Average Manual Efforts= 2000 hrs per month
+
+Solution Approach:
+
+1. The platform on which we can search adequately with the help of a certain keyword.
+2. Create a separate team within our team and provide write access only to them.
+3. Segregate the KI record application-wise.
+
+Outcome:
+
+1. We can search adequately.
+2. Reduced chances of risk.
+3. Reduced Manual Efforts.
+4. Increase in productivity.
+
+**************************************************** Efforts saved 1200 hrs per month *********************************************************
+    
 
